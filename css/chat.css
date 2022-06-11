@@ -388,7 +388,7 @@ Bounce
   .chat {
     margin: 0 auto;
     width:90%;
-    height: 100vh;
+    height:60vh;
   }
   .message-box .message-input {
     font-size: 15px;
