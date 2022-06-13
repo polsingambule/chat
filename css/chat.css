@@ -420,7 +420,7 @@ div#mCSB_1 {
     background-image: url(../images/chat_back_img.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 75vh;
+   height: 100%;
 }
 .messages .message {
     background: #000;
