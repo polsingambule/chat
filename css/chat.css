@@ -26,6 +26,8 @@ div#mCSB_1 {
     background-image: url(../images/chat_back_img.png);
     background-repeat: no-repeat;
     background-size: cover;
+  height: 62vh;
+    width: 100%;
 }
 .chat-title {
   flex: 0 1 45px;
