@@ -18,7 +18,10 @@ Chat
     display: flex;
     flex-direction: column;
 }
-
+.chat i{
+  text-align: center;
+  color: #DAF7A6;
+} 
 /*--------------------
 Chat Title
 --------------------*/
@@ -394,11 +397,11 @@ Bounce
   }
   .chat {
     width:100%;
-    height:92vh;
+    height: 100vh;
   }
   .message-box .message-input {
     font-size: 15px;
-    width: 70%;
+    width: 60%;
     height:25px;
     padding: 6px 15px;
 }
@@ -429,6 +432,11 @@ div#mCSB_1 {
     .chat-title {
     padding: 10px 10px 0px 50px;
   }
+  .chat i {
+    text-align: center;
+    font-size: 18px;\
+
+}
 }
 /*Responsive Media Queries( Start-> )*/
 
