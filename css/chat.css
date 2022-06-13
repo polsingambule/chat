@@ -22,6 +22,11 @@ Chat
 /*--------------------
 Chat Title
 --------------------*/
+div#mCSB_1 {
+    background-image: url(../images/chat_back_img.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .chat-title {
   flex: 0 1 45px;
   position: relative;
@@ -388,7 +393,7 @@ Bounce
   .chat {
     margin: 0 auto;
     width:90%;
-    height:70vh;
+    height: 100vh;
   }
   .message-box .message-input {
     font-size: 15px;
@@ -410,7 +415,7 @@ button.message-submit {
     top: 10px;
 }
 div#mCSB_1 {
-    background-image: url(../images/chat_back_img.jpg);
+    background-image: url(../images/chat_back_img.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
