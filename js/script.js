@@ -39,7 +39,7 @@ function insertMessage() {
 }
 
 $('.message-submit').click(function() {
-  insertMessage();
+  insertMessage(); 
 });
 
 $(window).on('keydown', function(e) {
@@ -50,32 +50,22 @@ $(window).on('keydown', function(e) {
 })
 
 var Fake = [
-  'Hi there, I\'m Polsing and you?',
-  'Nice to meet you',
-  'How are you?',
-  'Not too bad, thanks',
-  'What do you do?',
-  'That\'s awesome',
-  'Nagpur is a nice place to stay',
-  'I think you\'re a nice person',
-  'Why do you think that?',
-  'Can you explain?',
-  'It was a pleasure chat with you',
-  'See You Later',
-  'Bye',
-  ':)'
+  "Hello !! welcome to Raisoni Group of Institutions. You're talking to Jiya, the brilliant admission assistant. Nothing is more powerful and liberating than knowledge! I can help you with your queries regarding admission, hostel, fees and more.",
+  "Let's start with your name.",
+  "Nice to e-meet you ................................! Can you also tell me your email ID?",
+  "Please share your mobile number.",
 ]
 
 function fakeMessage() {
   if ($('.message-input').val() != '') {
     return false;
   }
-  $('<div class="message loading new"><figure class="avatar"><img src="./images/img_pro.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));
+  $('<div class="message loading new"><figure class="avatar"><img src="./images/img_pro.1.jpg" /></figure><span></span></div>').appendTo($('.mCSB_container'));
   updateScrollbar();
 
   setTimeout(function() {
     $('.message.loading').remove(); 
-    $('<div class="message new"><figure class="avatar"><img src="./images/img_pro.jpg" /></figure>' + Fake[i] + '</div>').appendTo($('.mCSB_container')).addClass('new');
+    $('<div class="message new"><figure class="avatar"><img src="./images/img_pro.1.jpg" /></figure>' + Fake[i] + '</div>').appendTo($('.mCSB_container')).addClass('new');
     setDate();
     updateScrollbar();
     i++;

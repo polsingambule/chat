@@ -5,16 +5,25 @@
 /*--------------------
 Chat
 --------------------*/
+.back_img{
+  background-image: url("../images/other_back.jpg");
+  background-position: 0px -100px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
 .chat {
     justify-content: center;
-    margin: 0 auto;
-    width: 300px;
-    height: 80vh;
+    margin:0 auto;
+    width: 350px;
+    height:85vh;
     z-index: 2;
     overflow: hidden;
     box-shadow: 0 5px 30px rgb(0 0 0 / 20%);
-    background: rgba(0, 0, 0, 0.5);
-    //border-radius: 20px;
+    background:#ff8700;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
 }
@@ -36,27 +45,23 @@ div#mCSB_1 {
   flex: 0 1 45px;
   position: relative;
   z-index: 2;
-  background: rgba(0, 0, 0, 0.2);
+  background:#ff8700;
   color: #fff;
-  text-transform: uppercase;
   text-align: left;
-  padding: 10px 10px 10px 50px;
+  padding: 0px 10px 0px 50px;
 }
-.chat-title h1, .chat-title h2 {
-  font-weight: normal;
-  font-size: 10px;
-  margin: 0;
-  padding: 0;
+.title_hide_btn{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.chat-title h2 {
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 8px;
-  letter-spacing: 1px;
+.chat-title div h1 {
+    font-size: 16px;
 }
 .chat-title .avatar {
   position: absolute;
   z-index: 1;
-  top: 8px;
+  top: 4px;
   left: 9px;
   border-radius: 30px;
   width: 30px;
@@ -64,7 +69,7 @@ div#mCSB_1 {
   overflow: hidden;
   margin: 0;
   padding: 0;
-  border: 2px solid rgba(255, 255, 255, 0.24);
+  border: 2px solid #fff;
 }
 .chat-title .avatar img {
   width: 100%;
@@ -76,7 +81,7 @@ Messages
 --------------------*/
 .messages {
   flex: 1 1 auto;
-  color: rgba(255, 255, 255, 0.5);
+  color:#000;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -85,7 +90,7 @@ Messages
   position: absolute;
   top: 0;
   left: 0;
-  height: 101%;
+  height: 100%;
   width: 100%;
 }
 .messages .message {
@@ -93,9 +98,9 @@ Messages
   float: left;
   padding: 6px 10px 7px;
   border-radius: 10px 10px 10px 0;
-  background: rgba(0, 0, 0, 0.3);
+  background:#fff;
   margin: 8px 0;
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.4;
   margin-left: 35px;
   position: relative;
@@ -111,7 +116,7 @@ Messages
   content: "";
   position: absolute;
   bottom: -6px;
-  border-top: 6px solid rgba(0, 0, 0, 0.3);
+  border-top: 6px solid #fff;
   left: 0;
   border-right: 7px solid transparent;
 }
@@ -126,7 +131,7 @@ Messages
   overflow: hidden;
   margin: 0;
   padding: 0;
-  border: 2px solid rgba(255, 255, 255, 0.24);
+  border: 2px solid #ff8700;
 }
 .messages .message .avatar img {
   width: 100%;
@@ -134,9 +139,9 @@ Messages
 }
 .messages .message.message-personal {
   float: right;
-  color: #fff;
+  color: #000;
   text-align: right;
-  background: linear-gradient(120deg, #248A52, #257287);
+  background:#fff;
   border-radius: 10px 10px 0 10px;
 }
 .messages .message.message-personal::before {
@@ -155,6 +160,7 @@ Messages
   transform-origin: 0 0;
   -webkit-animation: bounce 500ms linear both;
           animation: bounce 500ms linear both;
+  box-shadow: 0px 2px 11px 0px;
 }
 .messages .message.loading::before {
   position: absolute;
@@ -223,36 +229,34 @@ Messages
 Message Box
 --------------------*/
 .message-box {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 8px 25px;
+    padding: 8px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 input.message-input {
-    padding: 5px 5px;
+    padding: 5px 10px;
     font-size: 14px;
     border-radius: 50px;
     border: none;
+    width: 100%;
 }
 input.message-input:focus{
   outline: none;
 }
 button.message-submit {
-    padding: 5px 18px 4px;
+    padding: 3px 18px 0px 18px;
     border-radius: 50px;
-    background-color: #fff;
+    background-color:orange;
     border: none;
 }
-button.message-submit i:hover{
-    color: #fff;
-  }
-button.message-submit i {
-    padding: 1px 8px;
+button.message-submit img {
+    height: 20px;
+    width: 100%;
 }
 .message-box .message-submit:hover {
-  background: #1D7745;
   cursor: pointer;
+  opacity: 0.8;
 }
 
 /*--------------------
@@ -272,8 +276,76 @@ Custom Srollbar
   background-color: rgba(0, 0, 0, 0.5) !important;
 }
 
+.hide {
+  display: none;
+}
 
-
+.show {
+  display: block;
+}
+.show_chat_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.title_hide_btn button {
+    background: transparent;
+    border: navajowhite;
+    padding-top: 8px;
+}
+.title_hide_btn button img{
+    height: 20px;
+    width: 100%;    
+}
+.title_hide_btn a{
+    padding-top:10px;
+        padding-left: 10rem;
+}
+.title_hide_btn a img {
+    width: 100%;
+    height: 16px;
+}
+.show_chat_btn button {
+    text-align: left;
+    width:278px;
+    margin-top:15px;
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    border: none; 
+    border-radius: 20px;  
+}
+.show_chat_btn button:hover{
+cursor: pointer;
+box-shadow: 0px 0px 10px 1px #33ccff;
+transition: 0.5s;
+}
+/*.show_chat_btn button::after {
+    position: absolute;
+    right: 3.5rem;
+    top: 21rem;
+    content: '';
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 25px solid #33ccff;
+    transform: rotate(270deg);
+}*/
+.show_chat_btn img {
+    margin-right: 6px;
+    height: 50px;
+    width: auto;
+    background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+    border-radius: 48px;
+    object-fit: cover;
+    padding: 3px 0px;
+}
+.show_chat_btn img:hover{
+cursor: pointer;
+box-shadow: 0px 0px 10px 1px #ff99cc;
+transition: 0.5s;
+}
 
 
 /*--------------------
@@ -392,7 +464,6 @@ Bounce
 }
 @media screen and (max-width:749px){
   .message-box {
-    background: rgba(0, 0, 0, 0.2);
     padding:15px  15px;
   }
   .chat {
@@ -408,11 +479,7 @@ Bounce
 button.message-submit {
     padding: 10px 15px 8px;
 }
-.chat-title h2 {
-    padding-top: 5px;
-    font-size: 12px;
-}
-.chat-title h1 {
+.chat-title div h1 {
     font-size: 14px;
 }
 .chat-title .avatar {
